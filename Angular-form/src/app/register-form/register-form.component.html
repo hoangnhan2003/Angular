@@ -1,0 +1,77 @@
+<p>register-form works!</p>
+<form [formGroup]="user" (ngSubmit)="AddUser()">
+  <div >
+    <label for="floatingInput">Email address</label>
+    <p *ngIf="!user.controls.email?.valid && (user.controls.email?.dirty || user.controls.email?.touched)" style="color: red">
+      Email is not valid
+    </p>
+    <input type="email" class="form-control" id="floatingInput" formControlName="email" placeholder="name@example.com">
+
+  </div>
+  <div>
+    <label for="floatingPassword">Password</label>
+    <p *ngIf="!password?.valid && (password?.dirty || password?.touched)" style="color: red">
+      password is not valid!
+    </p>
+    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+  </div>
+  <div [formGroup]="confirmPass">
+    <label >Password</label>
+    <p style="color: red" *ngIf="!check">{{message}}</p>
+    <input type="password" class="form-control" id="" placeholder="ConfirmPassword" formControlName="confirmPassword">
+  </div>
+  <div>
+    <label>Country</label>
+    <select formControlName="country">
+      <option *ngFor = "let c of countries" value="{{c.name}}">{{c.name}}</option>
+    </select>
+    <div>
+      <label >Age</label>
+      <p *ngIf="!age?.valid && (age?.dirty || age?.touched)" style="color: red">
+        Age is not valid !!
+      </p>
+      <input type="number" class="form-control"  placeholder="Age" formControlName="age">
+    </div>
+    <div >
+      <p *ngIf="!user.controls.gender?.valid &&(user.controls.gender?.dirty || user.controls.gender?.touched)"
+      style="color: red">
+        age is not valid!
+      </p>
+      <select formControlName="gender">
+        <option value="1">Male</option>
+        <option value="0">FeMale</option>
+      </select>
+    </div>
+    <div>
+      <label >Phone</label>
+      <p *ngIf="!phone?.valid && (phone.dirty || phone.touched)" style="color: red">
+        phone is not valid!
+      </p>
+      <input type="text" class="form-control"  placeholder="phoneNumber" formControlName="phone">
+    </div>
+  </div>
+  <input type="submit" value="Submit" [disabled]="!user.valid" (click)="checkPassword()">
+</form>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">email</th>
+    <th scope="col">password</th>
+    <th scope="col">age</th>
+    <th scope="col">gender</th>
+    <th scope="col">country</th>
+    <th scope="col">phone</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{user.email}}</td>
+    <td>{{user.password}}</td>
+    <td>{{user.age}}</td>
+    <td>{{user.gender}}</td>
+    <td>{{user.country}}</td>
+    <td>{{user.phone}}</td>
+  </tr>
+  </tbody>
+</table>
+
