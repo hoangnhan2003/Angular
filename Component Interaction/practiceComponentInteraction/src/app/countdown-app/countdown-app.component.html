@@ -1,1 +1,7 @@
 <p>countdown-app works!</p>
+<button (click)="countDown()" >Start</button>
+<button *ngIf="!stop" (click)="clickStop()">Stop</button>
+<button *ngIf="stop" (click)="countDown() ;clickStop()">Resume</button>
+<button (click)="reset()" >Reset</button>
+<p>Click start button to start the CountDown</p>
+<p>Time to rest: {{time}} s</p>
