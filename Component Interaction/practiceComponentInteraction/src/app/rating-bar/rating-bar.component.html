@@ -1,0 +1,26 @@
+<p>rating-bar works!</p>
+<p>Rating from customer {{ratingPoint}}</p>
+<div style="display: flex; flex-direction: row">
+  <div *ngFor="let i of arr">
+    <div *ngIf="i <= ratingPoint; else elseBlock" >
+      <div class="active">{{i}}</div>
+    </div>
+    <ng-template #elseBlock>
+      <div class="non-active">{{i}}</div>
+    </ng-template>
+  </div>
+</div>
+
+<!--<ng-template #whileTemplate>-->
+<!--  <div *ngIf="count<=10;then incrementBlock">-->
+<!--    <div *ngIf="count <= ratingPoint">-->
+<!--      <div style="width: 30px;height: 30px;margin-right: 5px;background-color: aqua;color: white"; >{{count}}</div>-->
+<!--    </div>-->
+<!--    <div *ngIf="count > ratingPoint">-->
+<!--      <div style="width: 30px;height: 30px;margin-right: 5px;background-color: slategray;color: white">{{count}}</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <ng-template #incrementBlock>-->
+<!--    <div [(ngModel)]="count+1"></div>-->
+<!--  </ng-template>-->
+<!--</ng-template>-->

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-hacker-news-app'`, () => {
+  it(`should have as title 'practiceComponentInteraction'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-hacker-news-app');
+    expect(app.title).toEqual('practiceComponentInteraction');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-hacker-news-app app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('practiceComponentInteraction app is running!');
   });
 });
