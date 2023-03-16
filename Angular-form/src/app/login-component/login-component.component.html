@@ -1,0 +1,19 @@
+<p>login-component works!</p>
+<form [formGroup]="userLogin" (ngSubmit)="AddUser()">
+  <div >
+    <label for="floatingInput">Email address</label>
+    <p *ngIf="!userLogin.controls.userName?.valid && (userLogin.controls.userName?.dirty || userLogin.controls.userName?.touched)" style="color: red">
+      Email is not valid
+    </p>
+    <input type="email" class="form-control" id="floatingInput" formControlName="userName" placeholder="name@example.com">
+
+  </div>
+  <div>
+    <label for="floatingPassword">Password</label>
+    <p *ngIf="!password?.valid && (password?.dirty || password?.touched)" style="color: red">
+      password is not valid!
+    </p>
+    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+  </div>
+  <input type="submit" value="Submit" [disabled]="!userLogin.valid" >
+</form>
