@@ -1,0 +1,12 @@
+<p>dictionary-page-component works!</p>
+<table>
+  <tr>
+    <th>No</th>
+    <th>Word</th>
+    <th>Mean</th>
+  </tr>
+  <tr *ngFor="let word of dictionaries,index as i" [routerLink]="['/info',word.word]">
+    <td>{{i}}</td>
+    <td>{{word.word}}</td>
+  </tr>
+</table>

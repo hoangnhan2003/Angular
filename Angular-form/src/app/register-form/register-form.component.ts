@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from '../user';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
 import validate = WebAssembly.validate;
 import {newArray} from '@angular/compiler/src/util';
 
@@ -66,6 +66,7 @@ export class RegisterFormComponent implements OnInit {
   get phone() {
     return this.user.get('phone');
   }
+
 
   checkPassword() {
     console.log(this.user.get('password').value);
