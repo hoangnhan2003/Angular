@@ -1,78 +1,118 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
-
-body {
-  overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-}
-
-/* Toggle Styles */
-
-#viewport {
-  padding-left: 250px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#content {
-  width: 100%;
-  position: relative;
-  margin-right: 0;
-}
-
-/* Sidebar Styles */
-
-#sidebar {
-  z-index: 1000;
-  position: fixed;
-  left: 250px;
-  width: 250px;
-  height: 100%;
-  margin-left: -250px;
-  overflow-y: auto;
-  background: #37474F;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#sidebar header {
-  background-color: #263238;
-  font-size: 20px;
-  line-height: 52px;
-  text-align: center;
-}
-
-#sidebar header a {
-  color: #fff;
+input {
+  background: #fff;
   display: block;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #212121;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+}
+
+.main-container {
+  background-image: url('https://wallpaperaccess.com/full/81552.jpg');
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*justify-content: center;*/
+  /*align-content: center;*/
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+
+}
+
+.content-container {
+  width: 70%;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+}
+
+.child-content-container {
+  flex-grow: 1;
+  display: flex;
+  align-content: center;
+  height: 90vh;
+  align-items: center;
+}
+
+.list-item-content {
+  margin-left: auto;
+  width: 80px;
+  height: 80px;
+  background-color: #0b605a;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-item-content:hover {
+  background-color: rgba(11, 96, 89, 0.8);
+  cursor: pointer;
+}
+
+.list-item-content > i {
+  font-size: 40px;
+  color: #c3c3c3;
+}
+
+.list-item-content:hover > i {
+  color: white;
+  transform: scale(1.08);
+  transition: 0.5s;
+}
+
+.conainer-navbar {
+  width: 75vw;
+  height: 14vh;
+  background-color: #0b605a;
+  display: flex;
+  align-items: center;
+}
+
+.contain-input-container {
+  width: 20%;
+  float: left;
+  padding: 0 10px;
+
+}
+
+.btn-hover:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.submit-button {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+a {
+
   text-decoration: none;
 }
 
-#sidebar header a:hover {
-  color: #fff;
+.link-cancel {
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.link-cancel:hover{
+  color: #db846b;
 }
 
-#sidebar .nav{
-
-}
-
-#sidebar .nav a{
-  background: none;
-  border-bottom: 1px solid #455A64;
-  color: #CFD8DC;
-  font-size: 14px;
-  padding: 16px 24px;
-}
-
-#sidebar .nav a:hover{
-  background: none;
-  color: #ECEFF1;
-}
-
-#sidebar .nav a i{
-  margin-right: 16px;
-}
