@@ -13,6 +13,7 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <td>{{product.category.name}}</td>
     <td><button (click)="delete(product.id)">Xóa</button></td>
     <td><button [routerLink]="['/product/edit',product.id]">Chỉnh sửa</button></td>
 

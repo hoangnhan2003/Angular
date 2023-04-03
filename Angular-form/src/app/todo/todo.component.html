@@ -1,9 +1,34 @@
 <p>todo works!</p>
 <div class="col-md-8 offset-md-2">
-  <input type="text" class="form-control" [formControl]="content" (change)="change()">
+  <form [formGroup]="todo" (ngSubmit)="addTodo()">
+    <label>id</label>
+    <input type = "number" formControlName="id">
+    <br>
+    <label>Content</label>
+
+    <input type = "text" formControlName="content">
+    <br>
+    <label>Complete: </label>
+    <span>True</span><input type="radio" formControlName="complete" [value]="true"><span>&emsp;</span>
+    <span>False</span><input type="radio" formControlName="complete" [value]="false">
+    <input type="submit" value="Submit">
+  </form>
+  <br>
   <ul>
-    <li (click)="toggleTodo(i)" [class.complete]="todo.complete" *ngFor="let todo of todos;index as i">
-      {{todo.content}}
-    </li>
+    <table>
+<!--      <tr  [class.complete]="todo.complete" *ngFor="let todo of todos;index as i">-->
+      <tr  *ngFor="let todo of todos;index as i">
+        <td>{{todo.content}}</td>
+        <td>{{todo.complete}}</td>
+        <td>
+          <button style="cursor: pointer" (click)="deleteTodoById(todo.id)">Xóa việc làm trên</button>
+        </td>
+        <td>
+          <button [routerLink]="['/todo/edit',todo.id]">Update todo</button>
+        </td>
+      </tr>
+    </table>
+
+
   </ul>
 </div>

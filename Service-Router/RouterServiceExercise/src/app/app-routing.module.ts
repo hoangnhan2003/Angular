@@ -10,17 +10,12 @@ import {ProductEditComponent} from './product/product-edit/product-edit.componen
 const routes: Routes = [
   {path: '', component: DictionaryPageComponentComponent},
   {path: 'info/:text', component: DictionaryDetailComponentComponent},
-  {
-    path: 'product/list',
-    component: ProductListComponent
+  {path: 'product',
+   loadChildren: () => import('./product/product.module').then(module => module.ProductModule)
   },
   {
-    path: 'product/create',
-    component: ProductCreateComponent
-  },
-  {
-    path: 'product/edit/:productId',
-    component: ProductEditComponent
+    path: 'category',
+    loadChildren: () => import('./category/category.module').then(module => module.CategoryModule)
   }
 ];
 

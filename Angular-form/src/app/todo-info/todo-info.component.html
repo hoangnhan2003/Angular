@@ -1,0 +1,11 @@
+<form [formGroup]="todoForm" (ngSubmit)="update()">
+  <label>Content</label>
+  <input type="text" formControlName="content">
+  <br>
+  <label>Complete</label>
+  <span>True</span>
+  <input type="radio" formControlName="complete" [value]="true">
+  <span>False</span>
+  <input type="radio" formControlName="complete" [value]="false">
+  <input type="submit">
+</form>

@@ -1,67 +1,47 @@
 import {Injectable} from '@angular/core';
 import {Product} from '../model/product';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  products: Product[] = [{
-    id: 1,
-    name: 'IPhone 12',
-    price: 2400000,
-    description: 'New'
-  }, {
-    id: 2,
-    name: 'IPhone 11',
-    price: 1560000,
-    description: 'Like new'
-  }, {
-    id: 3,
-    name: 'IPhone X',
-    price: 968000,
-    description: '97%'
-  }, {
-    id: 4,
-    name: 'IPhone 8',
-    price: 7540000,
-    description: '98%'
-  }, {
-    id: 5,
-    name: 'IPhone 11 Pro',
-    price: 1895000,
-    description: 'Like new'
-  }];
+   products: Product[] = [];
 
-  constructor() {
+  constructor(private httpClient: HttpClient) {
   }
 
-  getAll(): Product[] {
-    return this.products;
+  getAll(): Observable<Product[]> {
+    return this.httpClient.get<Product[]>('http://localhost:3000/products');
   }
 
-  saveProduct(product: Product) {
-    this.products.push(product);
+  saveProduct(product: Product): Observable<any> {
+    return this.httpClient.post<Product>('http://localhost:3000/products', product);
   }
 
-  deleteProduct(productId) {
-    const newProducts = this.products.filter(product => product.id !== productId);
-    console.log(newProducts);
-    this.products = newProducts;
+  deleteProduct(productId: number): Observable<any> {
+    // const newProducts = this.products.filter(product => product.id !== productId);
+    // console.log(newProducts);
+    // this.products = newProducts;
+    return this.httpClient.delete('http://localhost:3000/products/' + productId);
   }
 
-  updateProduct(newProduct: Product): void {
-    for (const product of this.products) {
-      if (product.id === newProduct.id) {
-        product.name = newProduct.name;
-        product.price = newProduct.price;
-        product.description = newProduct.description;
-      }
-    }
+  updateProduct(newProduct: Product): Observable<any> {
+    // for (const product of this.products) {
+    //   if (product.id === newProduct.id) {
+    //     product.name = newProduct.name;
+    //     product.price = newProduct.price;
+    //     product.description = newProduct.description;
+    //   }
+    // }
+    return this.httpClient.put('http://localhost:3000/products/' + newProduct.id, newProduct);
   }
 
-  getProductById(productId): Product {
-    console.log('Du lieu nhan dc: ' + productId);
-    const a = this.products.filter(product => product.id === Number(productId))[0];
-    return a;
+  getProductById(productId: number): Observable<Product> {
+    // console.log('Du lieu nhan dc: ' + productId);
+    // const a = this.products.filter(product => product.id === Number(productId))[0];
+    // return a;
+    return this.httpClient.get<Product>('http://localhost:3000/products/' + productId);
   }
 }

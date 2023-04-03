@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44cfd0f2-60eb-44cd-a0f2-1e62a67b7861" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../demo/ss8/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/ss8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/ss8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/ss8/.idea/ss8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/ss8/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular-form/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular-form/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular-form/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular-form/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular-form/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular-form/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Angular-form/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular-form/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Angular-form/src/app/register-form/register-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular-form/src/app/register-form/register-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practiceComponentInteraction/src/app/rating-bar/rating-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/practiceComponentInteraction/src/app/rating-bar/rating-bar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Component/color-picker/src/app/color/color.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Component/color-picker/src/app/color/color.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular-form/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular-form/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular-form/src/app/todo/todo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular-form/src/app/todo/todo.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular-form/src/app/todo/todo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular-form/src/app/todo/todo.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Case-study/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Case-study/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Case-study/src/app/containerFurama/container.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Case-study/src/app/containerFurama/container.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Case-study/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Case-study/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Case-study" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -45,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679486675473</updated>
       <workItem from="1679486676687" duration="1693000" />
+      <workItem from="1680264904697" duration="7000" />
     </task>
     <servers />
   </component>
