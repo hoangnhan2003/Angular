@@ -9,16 +9,18 @@
         "id": 1,
         "name": "IPhone"
       }
-    }, {
+    },
+    {
       "id": 2,
-      "name": "IPhone 11",
+      "name": "IPhone 1112412",
       "price": 1560000,
       "description": "Like new",
       "category": {
         "id": 1,
         "name": "IPhone"
       }
-    }, {
+    },
+    {
       "id": 3,
       "name": "IPhone X",
       "price": 968000,
@@ -27,7 +29,8 @@
         "id": 1,
         "name": "IPhone"
       }
-    }, {
+    },
+    {
       "id": 4,
       "name": "IPhone 8",
       "price": 7540000,
@@ -36,7 +39,8 @@
         "id": 1,
         "name": "IPhone"
       }
-    }, {
+    },
+    {
       "id": 5,
       "name": "IPhone 11 Pro",
       "price": 1895000,
@@ -51,10 +55,12 @@
     {
       "id": 1,
       "name": "IPhone"
-    }, {
+    },
+    {
       "id": 2,
       "name": "Samsung"
-    }, {
+    },
+    {
       "id": 3,
       "name": "LG"
     }

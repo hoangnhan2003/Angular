@@ -36,6 +36,7 @@ export class ProductEditComponent implements OnInit {
       });
     });
   }
+
   categories: Category[] = [];
 
   productForm: FormGroup = new FormGroup({
